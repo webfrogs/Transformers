@@ -10,6 +10,9 @@
 		C32E37101FC663B3000FACD0 /* Transformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32E37061FC663B3000FACD0 /* Transformers.framework */; };
 		C32E37151FC663B3000FACD0 /* TransformersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37141FC663B3000FACD0 /* TransformersTests.swift */; };
 		C32E37171FC663B3000FACD0 /* Transformers.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E37091FC663B3000FACD0 /* Transformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32E37221FC66481000FACD0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37211FC66481000FACD0 /* JSON.swift */; };
+		C32E37241FC66766000FACD0 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37231FC66766000FACD0 /* Dictionary.swift */; };
+		C32E37261FC669F5000FACD0 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37251FC669F5000FACD0 /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		C32E370F1FC663B3000FACD0 /* TransformersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32E37141FC663B3000FACD0 /* TransformersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersTests.swift; sourceTree = "<group>"; };
 		C32E37161FC663B3000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32E37211FC66481000FACD0 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		C32E37231FC66766000FACD0 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		C32E37251FC669F5000FACD0 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		C32E36FC1FC663B3000FACD0 = {
 			isa = PBXGroup;
 			children = (
+				C32E37201FC6646D000FACD0 /* Core */,
 				C32E37081FC663B3000FACD0 /* Transformers */,
 				C32E37131FC663B3000FACD0 /* TransformersTests */,
 				C32E37071FC663B3000FACD0 /* Products */,
@@ -86,6 +93,16 @@
 			path = TransformersTests;
 			sourceTree = "<group>";
 		};
+		C32E37201FC6646D000FACD0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C32E37211FC66481000FACD0 /* JSON.swift */,
+				C32E37231FC66766000FACD0 /* Dictionary.swift */,
+				C32E37251FC669F5000FACD0 /* Array.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,9 +117,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C32E37051FC663B3000FACD0 /* Transformers */ = {
+		C32E37051FC663B3000FACD0 /* Transformers-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C32E371A1FC663B3000FACD0 /* Build configuration list for PBXNativeTarget "Transformers" */;
+			buildConfigurationList = C32E371A1FC663B3000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-iOS" */;
 			buildPhases = (
 				C32E37011FC663B3000FACD0 /* Sources */,
 				C32E37021FC663B3000FACD0 /* Frameworks */,
@@ -113,7 +130,7 @@
 			);
 			dependencies = (
 			);
-			name = Transformers;
+			name = "Transformers-iOS";
 			productName = Transformers;
 			productReference = C32E37061FC663B3000FACD0 /* Transformers.framework */;
 			productType = "com.apple.product-type.framework";
@@ -148,6 +165,7 @@
 				TargetAttributes = {
 					C32E37051FC663B3000FACD0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 					C32E370E1FC663B3000FACD0 = {
@@ -168,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C32E37051FC663B3000FACD0 /* Transformers */,
+				C32E37051FC663B3000FACD0 /* Transformers-iOS */,
 				C32E370E1FC663B3000FACD0 /* TransformersTests */,
 			);
 		};
@@ -196,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32E37261FC669F5000FACD0 /* Array.swift in Sources */,
+				C32E37221FC66481000FACD0 /* JSON.swift in Sources */,
+				C32E37241FC66766000FACD0 /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +233,7 @@
 /* Begin PBXTargetDependency section */
 		C32E37121FC663B3000FACD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C32E37051FC663B3000FACD0 /* Transformers */;
+			target = C32E37051FC663B3000FACD0 /* Transformers-iOS */;
 			targetProxy = C32E37111FC663B3000FACD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -334,6 +355,7 @@
 		C32E371B1FC663B3000FACD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -346,9 +368,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nswebfrog.Transformers;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -357,6 +380,7 @@
 		C32E371C1FC663B3000FACD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -369,7 +393,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nswebfrog.Transformers;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -380,6 +404,7 @@
 		C32E371E1FC663B3000FACD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -393,6 +418,7 @@
 		C32E371F1FC663B3000FACD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TransformersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -415,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C32E371A1FC663B3000FACD0 /* Build configuration list for PBXNativeTarget "Transformers" */ = {
+		C32E371A1FC663B3000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C32E371B1FC663B3000FACD0 /* Debug */,
