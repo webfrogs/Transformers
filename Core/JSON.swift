@@ -85,25 +85,26 @@ public struct Transformer {
             case toModelArrayFailed(String)
         }
 
-        public func toModelArray<T>(_ dicArray: [[String: Any]]
-            , throwWhenError: Bool = false) throws -> [T] where T: Codable {
-
-            let result: [T] = try dicArray.flatMap { (dic) -> T? in
-                do {
-                    let dicData = try JSONSerialization.data(withJSONObject: dic
-                        , options: JSONSerialization.WritingOptions())
-                    return try JSONDecoder().decode(T.self, from: dicData)
-                } catch {
-                    if throwWhenError {
-                        throw Errors.toModelArrayFailed(String(describing: T.self))
-                    } else {
-                        return nil
+        public func toModelArray<T>(shouldThrow: Bool = false)
+            -> ( [[String: Any]]) throws -> [T] where T: Codable {
+                return { (dicArray) -> [T] in
+                    let result: [T] = try dicArray.flatMap { (dic) -> T? in
+                        do {
+                            let dicData = try JSONSerialization.data(withJSONObject: dic
+                                , options: JSONSerialization.WritingOptions())
+                            return try JSONDecoder().decode(T.self, from: dicData)
+                        } catch {
+                            if shouldThrow {
+                                throw Errors.toModelArrayFailed(String(describing: T.self))
+                            } else {
+                                return nil
+                            }
+                        }
                     }
+
+                    return result
                 }
             }
-
-            return result
-        }
     }
 
 }
