@@ -61,7 +61,7 @@ public struct Transformer {
             }
         }
 
-        public func toModel<T>(_ dic: [String: Any]) throws -> T where T: Codable {
+        public static func toModel<T>(_ dic: [String: Any]) throws -> T where T: Codable {
             let jsonData: Data
             do {
                 jsonData = try JSONSerialization.data(withJSONObject: dic
@@ -85,25 +85,23 @@ public struct Transformer {
             case toModelArrayFailed(String)
         }
 
-        public func toModelArray<T>(shouldThrow: Bool = false)
-            -> ( [[String: Any]]) throws -> [T] where T: Codable {
-                return { (dicArray) -> [T] in
-                    let result: [T] = try dicArray.flatMap { (dic) -> T? in
-                        do {
-                            let dicData = try JSONSerialization.data(withJSONObject: dic
-                                , options: JSONSerialization.WritingOptions())
-                            return try JSONDecoder().decode(T.self, from: dicData)
-                        } catch {
-                            if shouldThrow {
-                                throw Errors.toModelArrayFailed(String(describing: T.self))
-                            } else {
-                                return nil
-                            }
+        public static func toModelArray<T>(_ dicArray: [[String: Any]], shouldThrow: Bool = false)
+            throws -> [T] where T: Codable {
+                let result: [T] = try dicArray.flatMap { (dic) -> T? in
+                    do {
+                        let dicData = try JSONSerialization.data(withJSONObject: dic
+                            , options: JSONSerialization.WritingOptions())
+                        return try JSONDecoder().decode(T.self, from: dicData)
+                    } catch {
+                        if shouldThrow {
+                            throw Errors.toModelArrayFailed(String(describing: T.self))
+                        } else {
+                            return nil
                         }
                     }
-
-                    return result
                 }
+
+                return result
             }
     }
 
