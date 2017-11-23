@@ -13,6 +13,14 @@
 		C32E37221FC66481000FACD0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37211FC66481000FACD0 /* JSON.swift */; };
 		C32E37241FC66766000FACD0 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37231FC66766000FACD0 /* Dictionary.swift */; };
 		C32E37261FC669F5000FACD0 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37251FC669F5000FACD0 /* Array.swift */; };
+		C32E373C1FC67E9E000FACD0 /* Transformers_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E372E1FC67E9D000FACD0 /* Transformers_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32E374C1FC67F20000FACD0 /* Transformers_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32E37501FC67F68000FACD0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37211FC66481000FACD0 /* JSON.swift */; };
+		C32E37511FC67F68000FACD0 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37231FC66766000FACD0 /* Dictionary.swift */; };
+		C32E37521FC67F68000FACD0 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37251FC669F5000FACD0 /* Array.swift */; };
+		C32E37531FC67F68000FACD0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37211FC66481000FACD0 /* JSON.swift */; };
+		C32E37541FC67F68000FACD0 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37231FC66766000FACD0 /* Dictionary.swift */; };
+		C32E37551FC67F68000FACD0 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E37251FC669F5000FACD0 /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,12 @@
 		C32E37211FC66481000FACD0 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		C32E37231FC66766000FACD0 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		C32E37251FC669F5000FACD0 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		C32E372C1FC67E9D000FACD0 /* Transformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32E372E1FC67E9D000FACD0 /* Transformers_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers_tvOS.h; sourceTree = "<group>"; };
+		C32E372F1FC67E9D000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers_macOS.h; sourceTree = "<group>"; };
+		C32E374B1FC67F20000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C32E37281FC67E9D000FACD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37441FC67F20000FACD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +90,8 @@
 				C32E37201FC6646D000FACD0 /* Core */,
 				C32E37081FC663B3000FACD0 /* Transformers */,
 				C32E37131FC663B3000FACD0 /* TransformersTests */,
+				C32E372D1FC67E9D000FACD0 /* Transformers-tvOS */,
+				C32E37491FC67F20000FACD0 /* Transformers-macOS */,
 				C32E37071FC663B3000FACD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +101,8 @@
 			children = (
 				C32E37061FC663B3000FACD0 /* Transformers.framework */,
 				C32E370F1FC663B3000FACD0 /* TransformersTests.xctest */,
+				C32E372C1FC67E9D000FACD0 /* Transformers.framework */,
+				C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +135,24 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		C32E372D1FC67E9D000FACD0 /* Transformers-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C32E372E1FC67E9D000FACD0 /* Transformers_tvOS.h */,
+				C32E372F1FC67E9D000FACD0 /* Info.plist */,
+			);
+			path = "Transformers-tvOS";
+			sourceTree = "<group>";
+		};
+		C32E37491FC67F20000FACD0 /* Transformers-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */,
+				C32E374B1FC67F20000FACD0 /* Info.plist */,
+			);
+			path = "Transformers-macOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -111,6 +161,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32E37171FC663B3000FACD0 /* Transformers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37291FC67E9D000FACD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32E373C1FC67E9E000FACD0 /* Transformers_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37451FC67F20000FACD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32E374C1FC67F20000FACD0 /* Transformers_macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +219,42 @@
 			productReference = C32E370F1FC663B3000FACD0 /* TransformersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C32E372B1FC67E9D000FACD0 /* Transformers-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32E373D1FC67E9E000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-tvOS" */;
+			buildPhases = (
+				C32E37271FC67E9D000FACD0 /* Sources */,
+				C32E37281FC67E9D000FACD0 /* Frameworks */,
+				C32E37291FC67E9D000FACD0 /* Headers */,
+				C32E372A1FC67E9D000FACD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transformers-tvOS";
+			productName = "Transformers-tvOS";
+			productReference = C32E372C1FC67E9D000FACD0 /* Transformers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C32E37471FC67F20000FACD0 /* Transformers-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32E374D1FC67F21000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-macOS" */;
+			buildPhases = (
+				C32E37431FC67F20000FACD0 /* Sources */,
+				C32E37441FC67F20000FACD0 /* Frameworks */,
+				C32E37451FC67F20000FACD0 /* Headers */,
+				C32E37461FC67F20000FACD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transformers-macOS";
+			productName = "Transformers-macOS";
+			productReference = C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +274,14 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					C32E372B1FC67E9D000FACD0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+					C32E37471FC67F20000FACD0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = C32E37001FC663B3000FACD0 /* Build configuration list for PBXProject "Transformers" */;
@@ -188,6 +298,8 @@
 			targets = (
 				C32E37051FC663B3000FACD0 /* Transformers-iOS */,
 				C32E370E1FC663B3000FACD0 /* TransformersTests */,
+				C32E372B1FC67E9D000FACD0 /* Transformers-tvOS */,
+				C32E37471FC67F20000FACD0 /* Transformers-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +313,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C32E370D1FC663B3000FACD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E372A1FC67E9D000FACD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37461FC67F20000FACD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +351,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32E37151FC663B3000FACD0 /* TransformersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37271FC67E9D000FACD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32E37521FC67F68000FACD0 /* Array.swift in Sources */,
+				C32E37501FC67F68000FACD0 /* JSON.swift in Sources */,
+				C32E37511FC67F68000FACD0 /* Dictionary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32E37431FC67F20000FACD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32E37551FC67F68000FACD0 /* Array.swift in Sources */,
+				C32E37531FC67F68000FACD0 /* JSON.swift in Sources */,
+				C32E37541FC67F68000FACD0 /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +575,104 @@
 			};
 			name = Release;
 		};
+		C32E373E1FC67E9E000FACD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Transformers-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-tvOS";
+				PRODUCT_NAME = Transformers;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		C32E373F1FC67E9E000FACD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Transformers-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-tvOS";
+				PRODUCT_NAME = Transformers;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		C32E374E1FC67F21000FACD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Transformers-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C32E374F1FC67F21000FACD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Transformers-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +699,24 @@
 			buildConfigurations = (
 				C32E371E1FC663B3000FACD0 /* Debug */,
 				C32E371F1FC663B3000FACD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32E373D1FC67E9E000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32E373E1FC67E9E000FACD0 /* Debug */,
+				C32E373F1FC67E9E000FACD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32E374D1FC67F21000FACD0 /* Build configuration list for PBXNativeTarget "Transformers-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32E374E1FC67F21000FACD0 /* Debug */,
+				C32E374F1FC67F21000FACD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
