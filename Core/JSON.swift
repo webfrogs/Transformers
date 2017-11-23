@@ -12,8 +12,7 @@ public struct Transformer {
     public struct JSON {
         public enum Errors: Error {
             case toDictionaryFailed(Any)
-            case toArrayFailed(Any)
-            case toTypedArrayFailed(Any)
+            case toArrayFailed(obj: Any, itemType: String)
         }
 
         public static let toDictionary: (Any) throws -> [String: Any] = {
@@ -24,16 +23,9 @@ public struct Transformer {
             return dic
         }
 
-        public static let toArray: (Any) throws -> [Any] = { (obj: Any) -> [Any] in
-            guard let array = obj as? [Any] else {
-                throw Errors.toArrayFailed(obj)
-            }
-            return array
-        }
-
-        public static func toTypedArray<T>(_ obj: Any) throws -> [T] {
+        public static func toArray<T>(_ obj: Any) throws -> [T] {
             guard let result = obj as? [T] else {
-                throw Errors.toTypedArrayFailed(obj)
+                throw Errors.toArrayFailed(obj: obj, itemType: String(describing: T.self))
             }
             return result
         }
@@ -42,8 +34,8 @@ public struct Transformer {
 
     public struct Dictionary {
         public enum Errors: Error {
-            case noValueFromKey(String)
-            case valueTypeWrong(String, Any)
+            case noValue(key: String)
+            case valueTypeWrong(value: Any, type: String)
             case notJson(Any)
             case toModelFailed(String)
         }
@@ -51,11 +43,11 @@ public struct Transformer {
         public static func value<T>(key: String) -> ([String: Any]) throws -> T {
             return { (dic: [String: Any]) -> T in
                 guard let value = dic[key] else {
-                    throw Errors.noValueFromKey(key)
+                    throw Errors.noValue(key: key)
                 }
 
                 guard let result = value as? T else {
-                    throw Errors.valueTypeWrong(String(describing: T.self), value)
+                    throw Errors.valueTypeWrong(value: value, type: String(describing: T.self))
                 }
                 return result
             }
@@ -82,27 +74,39 @@ public struct Transformer {
     public struct Array {
         public enum Errors: Error {
             case notJson(Any)
-            case toModelArrayFailed(String)
+            case toModelArrayFailed(failedItem: Any, type: String)
         }
 
-        public static func toModelArray<T>(_ dicArray: [[String: Any]], shouldThrow: Bool = false)
-            throws -> [T] where T: Codable {
-                let result: [T] = try dicArray.flatMap { (dic) -> T? in
-                    do {
-                        let dicData = try JSONSerialization.data(withJSONObject: dic
-                            , options: JSONSerialization.WritingOptions())
-                        return try JSONDecoder().decode(T.self, from: dicData)
-                    } catch {
-                        if shouldThrow {
-                            throw Errors.toModelArrayFailed(String(describing: T.self))
-                        } else {
-                            return nil
-                        }
-                    }
+        public static func toModelArray<T>(_ dicArray: [[String: Any]]) throws -> [T]
+        where T: Codable {
+            let result: [T] = try dicArray.flatMap { (dic) -> T? in
+                do {
+                    let dicData = try JSONSerialization.data(withJSONObject: dic
+                        , options: JSONSerialization.WritingOptions())
+                    return try JSONDecoder().decode(T.self, from: dicData)
+                } catch {
+                    throw Errors.toModelArrayFailed(failedItem: dic
+                        , type: String(describing: T.self))
                 }
-
-                return result
             }
+
+            return result
+        }
+
+        public static func toModelArrayWithoutError<T>(_ dicArray: [[String: Any]]) -> [T]
+        where T: Codable {
+            let result: [T] = dicArray.flatMap { (dic) -> T? in
+                do {
+                    let dicData = try JSONSerialization.data(withJSONObject: dic
+                        , options: JSONSerialization.WritingOptions())
+                    return try JSONDecoder().decode(T.self, from: dicData)
+                } catch {
+                    return nil
+                }
+            }
+
+            return result
+        }
     }
 
 }
