@@ -11,24 +11,44 @@ import Foundation
 public struct Transformer {
     public struct JSON {
         public enum Errors: Error {
+            case notJsonObject
             case toDictionaryFailed(Any)
             case toArrayFailed(obj: Any, itemType: String)
         }
 
         public static let toDictionary: (Any) throws -> [String: Any] = {
-            (obj: Any) -> [String: Any] in
+            (json: Any) -> [String: Any] in
+            let obj = try p_serializeIfNecessary(json: json)
+
             guard let dic = obj as? [String: Any] else {
                 throw Errors.toDictionaryFailed(obj)
             }
             return dic
         }
 
-        public static func toArray<T>(_ obj: Any) throws -> [T] {
+        public static func toArray<T>(_ json: Any) throws -> [T] {
+            let obj = try p_serializeIfNecessary(json: json)
+
             guard let result = obj as? [T] else {
                 throw Errors.toArrayFailed(obj: obj, itemType: String(describing: T.self))
             }
             return result
         }
+
+        private static func p_serializeIfNecessary(json: Any) throws -> Any {
+            let obj: Any
+            if let rawData = json as? Data {
+                do {
+                    obj = try JSONSerialization.jsonObject(with: rawData, options: [])
+                } catch {
+                    throw Errors.notJsonObject
+                }
+            } else {
+                obj = json
+            }
+            return obj
+        }
+
     }
 
 
