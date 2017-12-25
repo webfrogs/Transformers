@@ -38,7 +38,7 @@
 		C32E372C1FC67E9D000FACD0 /* Transformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32E372E1FC67E9D000FACD0 /* Transformers_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers_tvOS.h; sourceTree = "<group>"; };
 		C32E372F1FC67E9D000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32E37481FC67F20000FACD0 /* Transformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers_macOS.h; sourceTree = "<group>"; };
 		C32E374B1FC67F20000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 				C32E37061FC663B3000FACD0 /* Transformers.framework */,
 				C32E370F1FC663B3000FACD0 /* TransformersTests.xctest */,
 				C32E372C1FC67E9D000FACD0 /* Transformers.framework */,
-				C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */,
+				C32E37481FC67F20000FACD0 /* Transformers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			);
 			name = "Transformers-macOS";
 			productName = "Transformers-macOS";
-			productReference = C32E37481FC67F20000FACD0 /* Transformers_macOS.framework */;
+			productReference = C32E37481FC67F20000FACD0 /* Transformers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -500,6 +500,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nswebfrog.Transformers;
 				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -525,6 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nswebfrog.Transformers;
 				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -624,7 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -649,7 +651,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nswebfrog.Transformers-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Transformers;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
