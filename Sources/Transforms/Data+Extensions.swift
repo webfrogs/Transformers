@@ -8,6 +8,13 @@
 
 import Foundation
 
+public struct Errors {
+    public enum Json: Error {
+        case toModelFailed
+        case toModelArrayFailed
+    }
+}
+
 public extension Data {
     func toDictionary() -> [String: Any]? {
         return p_serialize() as? [String: Any]
@@ -25,6 +32,20 @@ public extension Data {
     func jsonToModelArray<T>() -> [T]? where T: Codable {
         let modelArray = try? JSONDecoder().decode([T].self, from: self)
         return modelArray
+    }
+
+    static func jsonToModelHandler<T>(data: Data) throws -> T where T: Codable {
+        guard let result: T = data.jsonToModel() else {
+            throw Errors.Json.toModelFailed
+        }
+        return result
+    }
+
+    static func jsonToModelArrayHandler<T>(data: Data) throws -> [T] where T: Codable {
+        guard let result: [T] = data.jsonToModelArray() else {
+            throw Errors.Json.toModelArrayFailed
+        }
+        return result
     }
 }
 

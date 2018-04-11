@@ -4,11 +4,12 @@
 
 *Transformers* is a framework to transform things elegantly using the power of Swift programming language. 
 
-Support Swift version: 4.1 or newer
+> Note: From version 1.0.0 Transforms only support Swift version 4.1 or newer
+> If you want to use Transforms below Swift 4.1, specific git hash: `dc7b5179ae0db7e7b343fa6dcb050b759539f443`
 
 ## Feature
 
-- Type casting of JSON object.
+- Cast JSON data with type.
 - Cast a swift dictionary to swift model which confirms `Codable` protocol.
 - Cast a swift array whose item type is dictionary to swift model array whose items confirm `Codable` protocol.
 
@@ -23,14 +24,14 @@ Download the project, and drag the `Core` folder to your project.
 Add this to `Cartfile`
 
 ```
-github "webfrogs/Transformers" "master"
+github "webfrogs/Transformers" ~> 1.0
 ```
 
 ### Swift Package Manager
 
 ```
 dependencies: [
-    .package(url: "https://github.com/Alamofire/Alamofire.git", .branch("master")),
+    .package(url: "https://github.com/Alamofire/Alamofire.git", majorVersion: 1),
 ]
 ```
 
@@ -41,18 +42,13 @@ The most common scene in iOS programming is handle JSON data.
 ### Handle JSON 
 
 ```swift
-do {
-    let jsonString = """
-    {"key1": "value2"}
-    """
-    let jsonObject = try JSONSerialization.jsonObject(with: jsonString.data(using: String.Encoding.utf8)!, options: [])
-    let dic = try Transformer.JSON.toDictionary(jsonObject)
-    print(dic)
-    let value: String = try Transformer.Dictionary.value(key: "key1")(dic)
-    print(value)
-} catch {
-    print(error)
-}
+let jsonString = """
+{"key1": "value2"}
+"""
+let value1: String? = jsonString.data(using: String.Encoding.utf8)
+    .flatMap({$0.toDictionary()})
+    .flatMap({$0.value(key: "key1")})
+print(value1 ?? "")
 ```
 
 ### RxSwift
@@ -74,9 +70,11 @@ struct GithubAPIResult: Codable {
 
 let request = URLRequest(url: URL(string: "https://api.github.com")!)
 let apiResult: Observable<GithubAPIResult> = URLSession.shared
-    .rx.json(request: request)
-    .map(Transformer.JSON.toDictionary)
-    .map(Transformer.Dictionary.toModel)
+    .rx.data(request: request)
+    .map(Data.jsonToModelHandler)
+apiResult.subscribe(onNext: { (result) in
+    print(result)
+}).disposed(by: kDisposeBag)
 ```
 
 
