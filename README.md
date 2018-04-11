@@ -4,8 +4,7 @@
 
 *Transformers* is a framework to transform things elegantly using the power of Swift programming language. 
 
-> Note: From version 1.0.0 Transforms only support Swift version 4.1 or newer
-> If you want to use Transforms below Swift 4.1, specific git hash: `dc7b5179ae0db7e7b343fa6dcb050b759539f443`
+> Note: Support Swift version: 4.1 or newer
 
 ## Feature
 
@@ -31,7 +30,7 @@ github "webfrogs/Transformers" ~> 1.0
 
 ```
 dependencies: [
-    .package(url: "https://github.com/Alamofire/Alamofire.git", majorVersion: 1),
+    .package(url: "https://github.com/webfrogs/Transformers.git", .upToNextMinor(from: "1.0.0")),
 ]
 ```
 
