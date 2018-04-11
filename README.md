@@ -1,9 +1,10 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/badge/Platform-iOS|macOS|tvOS-4BC51D.svg?style=flat)](https://github.com/webfrogs/HandOfTheKing)
+[![Platform](https://img.shields.io/badge/Platform-iOS|macOS|tvOS-4BC51D.svg?style=flat)](https://github.com/webfrogs/Transformers)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 *Transformers* is a framework to transform things elegantly using the power of Swift programming language. 
 
-Carthage support only. 
+Support Swift version: 4.1 or newer
 
 ## Feature
 
@@ -23,6 +24,14 @@ Add this to `Cartfile`
 
 ```
 github "webfrogs/Transformers" "master"
+```
+
+### Swift Package Manager
+
+```
+dependencies: [
+    .package(url: "https://github.com/Alamofire/Alamofire.git", .branch("master")),
+]
 ```
 
 ## Usage

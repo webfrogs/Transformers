@@ -99,7 +99,7 @@ public struct Transformer {
 
         public static func toModelArray<T>(_ dicArray: [[String: Any]]) throws -> [T]
         where T: Codable {
-            let result: [T] = try dicArray.flatMap { (dic) -> T? in
+            let result: [T] = try dicArray.compactMap { (dic) -> T? in
                 do {
                     let dicData = try JSONSerialization.data(withJSONObject: dic
                         , options: JSONSerialization.WritingOptions())
@@ -115,7 +115,7 @@ public struct Transformer {
 
         public static func toModelArrayWithoutError<T>(_ dicArray: [[String: Any]]) -> [T]
         where T: Codable {
-            let result: [T] = dicArray.flatMap { (dic) -> T? in
+            let result: [T] = dicArray.compactMap { (dic) -> T? in
                 do {
                     let dicData = try JSONSerialization.data(withJSONObject: dic
                         , options: JSONSerialization.WritingOptions())
