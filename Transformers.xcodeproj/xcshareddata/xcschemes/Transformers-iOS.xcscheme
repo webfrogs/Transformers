@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C32E370E1FC663B3000FACD0"
+               BuildableName = "TransformersTests.xctest"
+               BlueprintName = "TransformersTests"
+               ReferencedContainer = "container:Transformers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C32E37051FC663B3000FACD0"
+            BuildableName = "Transformers.framework"
+            BlueprintName = "Transformers-iOS"
+            ReferencedContainer = "container:Transformers.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
