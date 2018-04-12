@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3167673207E07E7005E8858 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167672207E07E7005E8858 /* Data+Extensions.swift */; };
-		C3167674207E07EB005E8858 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167672207E07E7005E8858 /* Data+Extensions.swift */; };
-		C3167675207E07EB005E8858 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167672207E07E7005E8858 /* Data+Extensions.swift */; };
-		C3167677207E0EEF005E8858 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167676207E0EEF005E8858 /* Dictionary+Extensions.swift */; };
-		C3167678207E0F13005E8858 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167676207E0EEF005E8858 /* Dictionary+Extensions.swift */; };
-		C3167679207E0F14005E8858 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167676207E0EEF005E8858 /* Dictionary+Extensions.swift */; };
 		C316767F207E10AF005E8858 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C316767E207E10AF005E8858 /* DataExtensionTests.swift */; };
 		C32E37101FC663B3000FACD0 /* Transformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32E37061FC663B3000FACD0 /* Transformers.framework */; };
 		C32E37171FC663B3000FACD0 /* Transformers.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E37091FC663B3000FACD0 /* Transformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C32E373C1FC67E9E000FACD0 /* Transformers_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E372E1FC67E9D000FACD0 /* Transformers_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C32E374C1FC67F20000FACD0 /* Transformers_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C35FC60C207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60A207F2ED900E6C36B /* Dictionary+Extensions.swift */; };
+		C35FC60D207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60A207F2ED900E6C36B /* Dictionary+Extensions.swift */; };
+		C35FC60E207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60A207F2ED900E6C36B /* Dictionary+Extensions.swift */; };
+		C35FC60F207F2ED900E6C36B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60B207F2ED900E6C36B /* Data+Extensions.swift */; };
+		C35FC610207F2ED900E6C36B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60B207F2ED900E6C36B /* Data+Extensions.swift */; };
+		C35FC611207F2ED900E6C36B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC60B207F2ED900E6C36B /* Data+Extensions.swift */; };
+		C35FC613207F309000E6C36B /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FC612207F309000E6C36B /* DictionaryExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C3167672207E07E7005E8858 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
-		C3167676207E0EEF005E8858 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		C316767E207E10AF005E8858 /* DataExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionTests.swift; sourceTree = "<group>"; };
 		C32E37061FC663B3000FACD0 /* Transformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32E37091FC663B3000FACD0 /* Transformers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers.h; sourceTree = "<group>"; };
@@ -45,6 +44,9 @@
 		C32E37481FC67F20000FACD0 /* Transformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32E374A1FC67F20000FACD0 /* Transformers_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformers_macOS.h; sourceTree = "<group>"; };
 		C32E374B1FC67F20000FACD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C35FC60A207F2ED900E6C36B /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		C35FC60B207F2ED900E6C36B /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		C35FC612207F309000E6C36B /* DictionaryExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,18 +85,9 @@
 		C316766C207E06CA005E8858 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C316766D207E06CA005E8858 /* Transforms */,
+				C35FC609207F2ED900E6C36B /* Transformers */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		C316766D207E06CA005E8858 /* Transforms */ = {
-			isa = PBXGroup;
-			children = (
-				C3167672207E07E7005E8858 /* Data+Extensions.swift */,
-				C3167676207E0EEF005E8858 /* Dictionary+Extensions.swift */,
-			);
-			path = Transforms;
 			sourceTree = "<group>";
 		};
 		C32E36FC1FC663B3000FACD0 = {
@@ -134,6 +127,7 @@
 			children = (
 				C316767E207E10AF005E8858 /* DataExtensionTests.swift */,
 				C32E37161FC663B3000FACD0 /* Info.plist */,
+				C35FC612207F309000E6C36B /* DictionaryExtensionTests.swift */,
 			);
 			path = TransformersTests;
 			sourceTree = "<group>";
@@ -154,6 +148,15 @@
 				C32E374B1FC67F20000FACD0 /* Info.plist */,
 			);
 			path = "Transformers-macOS";
+			sourceTree = "<group>";
+		};
+		C35FC609207F2ED900E6C36B /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				C35FC60A207F2ED900E6C36B /* Dictionary+Extensions.swift */,
+				C35FC60B207F2ED900E6C36B /* Data+Extensions.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3167673207E07E7005E8858 /* Data+Extensions.swift in Sources */,
-				C3167677207E0EEF005E8858 /* Dictionary+Extensions.swift in Sources */,
+				C35FC60C207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */,
+				C35FC60F207F2ED900E6C36B /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C316767F207E10AF005E8858 /* DataExtensionTests.swift in Sources */,
+				C35FC613207F309000E6C36B /* DictionaryExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3167674207E07EB005E8858 /* Data+Extensions.swift in Sources */,
-				C3167678207E0F13005E8858 /* Dictionary+Extensions.swift in Sources */,
+				C35FC60D207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */,
+				C35FC610207F2ED900E6C36B /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3167675207E07EB005E8858 /* Data+Extensions.swift in Sources */,
-				C3167679207E0F14005E8858 /* Dictionary+Extensions.swift in Sources */,
+				C35FC60E207F2ED900E6C36B /* Dictionary+Extensions.swift in Sources */,
+				C35FC611207F2ED900E6C36B /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
